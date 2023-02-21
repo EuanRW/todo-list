@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/EuanRW/restaurant-page#readme",
   "devDependencies": {
+    "@types/autosize": "^4.0.1",
     "html-webpack-plugin": "^5.5.0",
     "ts-loader": "^9.4.2",
     "typescript": "^4.9.5",
@@ -27,6 +28,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "autosize": "^6.0.1",
     "css-loader": "^6.7.2",
     "style-loader": "^3.3.1"
   }

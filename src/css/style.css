@@ -41,6 +41,11 @@ button:hover {
   font-weight: bold;
 }
 
+textarea,
+input[type=text] {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 /* #endregion */
 
 /* #region HEADER */
@@ -159,7 +164,6 @@ footer a:hover {
   position: relative;
   max-width: 800px;
   width: 100%;
-  border: 1px solid red;
 }
 
 #home-page .content h1 {
@@ -170,7 +174,7 @@ footer a:hover {
 #header-div {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: end;
   padding-top: 5px;
   padding-left: 5px;
   padding-right: 5px;
@@ -180,12 +184,14 @@ footer a:hover {
 
 #header-date {
   color: gray;
+  bottom: 1px;
+  position: relative;
 }
 
 #header-date {
 }
 
-#home-page .content .todo-master-container {
+#home-page .content #todo-master-container {
   width: 100%;
   padding-left: 5px;
   padding-right: 5px;
@@ -275,6 +281,67 @@ footer a:hover {
   padding: 5px;
   font-size: 16px;
   color: rgb(124, 123, 123);
+}
+
+.task-form {
+  width: 100%;
+  border: 1px solid rgb(221, 221, 221);
+  padding: 3px;
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+}
+
+.field {
+  margin-bottom: 5px;
+}
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  border: 0;
+  font-size: 14px;
+  resize: none;
+}
+
+.extra-input {
+  border: 1px solid rgb(221, 221, 221);
+  padding: 3px;
+  border-radius: 0.25rem;
+  margin: 0;
+}
+
+.form-bottom-fields-container {
+  display: flex;
+}
+
+.extra-fields-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.submit-button-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.submit-task-button {
+  border: 1px solid rgb(221, 221, 221);
+  padding: 3px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 14px;
+  background-color: blue;
+  color: white;
+  margin-top: 1px;
+}
+
+.submit-task-button:hover {
+  background-color: cornflowerblue;
 }
 
 /* #endregion */

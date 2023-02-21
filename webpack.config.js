@@ -8,6 +8,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Do-me",
+      favicon: "./src/img/favicon.ico"
     }),
   ],
   output: {

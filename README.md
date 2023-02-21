@@ -1,4 +1,4 @@
-# restaurant-page
+# todo-list
 
 [Live Demo](https://euanrw.github.io/restaurant-page/) :point_left:
 A Todo List web application with basic web storage.

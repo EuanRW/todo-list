@@ -1,23 +1,20 @@
 import "./css/reset.css";
 import "./css/style.css";
 // import { createHeader } from "./modules/elements/header";
-import { createFooter } from "./modules/elements/footer";
-
-// Create the element
-const helloWorld: HTMLDivElement = document.createElement("div");
-
-// Set the text content of the element
-helloWorld.textContent = "Hello, World!";
-
-// Add the element to the DOM
-document.body.appendChild(helloWorld);
-// import "./modules/elements/header";
-// import { createNavMain } from "./modules/elements/nav";
 import { createHomePage } from "./modules/pages/home";
-// import { createAboutPage } from "./modules/pages/about";
-// import { createMenuPage } from "./modules/pages/menu";
-// import { createContactPage } from "./modules/pages/contact";
-// import { animateNavMain } from "./modules/functions/animateNav";
+import { createFooter } from "./modules/elements/footer";
+import { Todo } from "./modules/objects/todo";
+import { List } from "./modules/objects/list";
+import { createList } from "./modules/elements/list";
+
+const listArray:List[] = [];
+const todoArray:Todo[]  = [];
+
+// Create initial list.
+const initialList: List = {
+  title: 'General'
+}
+listArray.push(initialList)
 
 const content = document.body;
 content.append(
@@ -29,6 +26,8 @@ content.append(
 //   createContactPage(),
   createFooter()
 );
+
+export {listArray, todoArray}
 
 // animateNavMain()
 
@@ -43,7 +42,6 @@ content.append(
 
 // window.addEventListener("pageshow", () => hidePages(aboutPage, menuPage, contactPage));
 
-// // TODO: Make restaraunt pizza slice logo into home link.
 // const pageLinks = document.querySelectorAll(".nav-main a");
 // for (const pageLink of pageLinks) {
 //   pageLink.addEventListener("click", () => {

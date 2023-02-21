@@ -1,6 +1,12 @@
 import { Todo } from "../objects/todo";
+import { todoArray } from "../..";
 
 const createTodo = (todo: Todo) => {
+
+    //Update master todo list with this todo.
+    todoArray.push(todo)
+
+    //Create todo element.
     const todoDiv = document.createElement("div");
     todoDiv.setAttribute("id", `todo-${todo.id}`);
     todoDiv.setAttribute("class", "todo")
@@ -31,8 +37,6 @@ const createTodo = (todo: Todo) => {
 
         if (todo.status == "Complete") {
             status.classList.add("todo-status-complete")
-        } else if (todo.status == "In Progress") {
-            status.classList.add("todo-status-in-progress")
         } else if (todo.status == "To do") {
             status.classList.add("todo-status-to-do")
         }
@@ -50,7 +54,7 @@ const createTodo = (todo: Todo) => {
         }
 
         const list = document.createElement("p")
-        list.textContent = todo.list
+        list.textContent = todo.list.title
         list.setAttribute("class", "todo-list")
 
         todoMetaDataDiv.appendChild(dueDate)
@@ -63,7 +67,6 @@ const createTodo = (todo: Todo) => {
 
     todoDiv.appendChild(todoTitle)
     todoDiv.appendChild(createMetaDataDiv())
-
 
     const content = document.body;
     content.appendChild(todoDiv);

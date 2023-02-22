@@ -1,5 +1,7 @@
 import { Todo } from "../objects/todo";
 import { todoArray } from "../..";
+import trash from "../../img/trash.svg"
+import { removeTodo } from "../functions/removeTodo";
 
 const createTodo = (todo: Todo) => {
 
@@ -57,10 +59,22 @@ const createTodo = (todo: Todo) => {
         list.textContent = todo.list.title
         list.setAttribute("class", "todo-list")
 
-        todoMetaDataDiv.appendChild(dueDate)
-        todoMetaDataDiv.appendChild(status)
-        todoMetaDataDiv.appendChild(priority)
-        todoMetaDataDiv.appendChild(list)
+        const deleteIcon = document.createElement("img");
+        deleteIcon.setAttribute("class", "delete-icon")
+        deleteIcon.src = trash;
+        deleteIcon.alt = "Delete task icon.";
+        deleteIcon.addEventListener("click", () => {
+            removeTodo(todoDiv)
+          })
+
+        todoMetaDataDiv.append(
+            dueDate,
+            status,
+            priority,
+            list,
+            deleteIcon
+            
+        )
 
         return todoMetaDataDiv
     }

@@ -1,6 +1,6 @@
 # todo-list
 
-[Live Demo](https://euanrw.github.io/restaurant-page/) :point_left:
+[Live Demo](https://euanrw.github.io/todo-list/) :point_left:
 A Todo List web application with basic web storage.
 
 ## Objectives

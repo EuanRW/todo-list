@@ -15,7 +15,7 @@ const initialList: List = {
   title: 'General'
 }
 listArray.push(initialList)
-
+  
 const content = document.body;
 content.append(
 //   createHeader(),

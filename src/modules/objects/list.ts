@@ -3,7 +3,7 @@ export interface List {
 }
 
 const listExampleData: List = {
-  title: "Personal",
+  title: "General",
 };
 
 export {listExampleData}

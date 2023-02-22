@@ -42,8 +42,8 @@ button:hover {
 }
 
 textarea,
-input[type=text] {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+input[type="text"] {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* #endregion */
@@ -151,7 +151,6 @@ footer a:hover {
 }
 
 #home-page main {
-  border: 1px solid black;
 }
 
 #home-page .content {
@@ -196,6 +195,8 @@ footer a:hover {
   padding-left: 5px;
   padding-right: 5px;
   box-sizing: border-box;
+  border-bottom: 1px solid rgb(221, 221, 221);
+
 }
 
 .todo {
@@ -204,6 +205,7 @@ footer a:hover {
   align-items: center;
   padding-top: 5px;
   padding-bottom: 5px;
+  border-top: 1px solid rgb(221, 221, 221);
 }
 
 .todo-meta-data-div {
@@ -251,7 +253,7 @@ footer a:hover {
 .todo-status-to-do {
   border-radius: 0.25rem;
   padding: 3px;
-  background-color:black;
+  background-color: black;
   color: white;
 }
 
@@ -325,8 +327,21 @@ footer a:hover {
 .submit-button-container {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: end;
+  flex-direction: row;
+  justify-content: end;
+  align-items: start;
+  gap: 5px;
+}
+
+.cancel-task-button {
+  border: 1px solid rgb(221, 221, 221);
+  padding: 3px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 14px;
+  background-color: crimson;
+  color: white;
+  margin-top: 1px;
 }
 
 .submit-task-button {
@@ -340,8 +355,22 @@ footer a:hover {
   margin-top: 1px;
 }
 
+.cancel-task-button:hover {
+  background-color:indianred;
+}
+
 .submit-task-button:hover {
   background-color: cornflowerblue;
+}
+
+.delete-icon {
+  padding: 3px;
+  border-radius: 0.25rem;
+}
+
+.delete-icon:hover {
+  cursor: pointer;
+  background-color: rgba(221, 221, 221, 0.8);
 }
 
 /* #endregion */

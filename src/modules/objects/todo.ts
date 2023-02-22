@@ -2,7 +2,7 @@ import { List } from "./list";
 import { listExampleData } from "./list";
 
 export interface Todo {
-  id: Number;
+  id: number;
   title: string;
   description: string;
   dueDate: Date;

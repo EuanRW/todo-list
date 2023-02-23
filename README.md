@@ -24,7 +24,7 @@ In Progress
 
 ## Project Screen Shot(s)
 
-![](project.png)
+![](/src/img/project.png)
 
 ## Installation and Setup Instructions
 

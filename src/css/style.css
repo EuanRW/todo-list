@@ -208,6 +208,22 @@ footer a:hover {
   border-top: 1px solid rgb(221, 221, 221);
 }
 
+.todo-left-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.check-icon {
+  padding: 3px;
+  border-radius: 0.25rem;
+}
+
+.check-icon:hover {
+  cursor: pointer;
+  background-color: rgba(221, 221, 221, 0.8);
+}
+
 .todo-meta-data-div {
   display: flex;
   align-items: center;

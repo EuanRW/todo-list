@@ -6,6 +6,7 @@ import { todoArray } from "../..";
 import { listArray } from "../..";
 import { handleFormSubmit } from "../functions/handleFormSubmit";
 import autosize from "autosize";
+import { formatDate } from "../functions/formatDate";
 
 const createMainContent = () => {
   const createContent = () => {
@@ -14,39 +15,12 @@ const createMainContent = () => {
       const headerDiv = document.createElement("div");
       headerDiv.setAttribute("id", "header-div");
 
-      const getFormattedDate = () => {
-        const date = new Date();
-        const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-        const monthsOfYear = [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
-        ];
-
-        const dayOfWeek = daysOfWeek[date.getDay()];
-        const dayOfMonth = date.getDate();
-        const month = monthsOfYear[date.getMonth()];
-
-        const formattedDate = `${dayOfWeek} ${dayOfMonth} ${month}`;
-
-        return formattedDate;
-      };
-
       const header = document.createElement("h1");
       header.textContent = "All Todos";
 
       const date = document.createElement("p");
       date.setAttribute("id", "header-date");
-      date.textContent = getFormattedDate();
+      date.textContent = formatDate(new Date());
 
       headerDiv.appendChild(header);
       headerDiv.appendChild(date);
@@ -69,7 +43,10 @@ const createMainContent = () => {
       btn.textContent = "Add todo...";
       btn.setAttribute("class", "add-todo-btn");
 
-      // TODO: Create Add Todo button functionality.
+      btn.addEventListener("click", () => {
+        btn.remove()
+        content.append(createForm())
+      })
       return btn;
     };
 
@@ -208,7 +185,8 @@ const createMainContent = () => {
         btn.textContent = "Cancel";
 
         btn.addEventListener("click", () => {
-          // Do nothing.
+          form.remove()
+          content.append(createAddTodoBtn())
         });
         return btn;
       };
@@ -240,6 +218,9 @@ const createMainContent = () => {
           todoMasterDiv.append(
             createTodo(todo)
           )
+
+          form.remove()
+          content.append(createAddTodoBtn())
         });
 
         return btn;
@@ -286,7 +267,7 @@ const createMainContent = () => {
       createHeader(),
       createTodoContainer(),
       createAddTodoBtn(),
-      createForm()
+      // createForm()
     );
     return content;
   };

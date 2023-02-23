@@ -5,7 +5,7 @@ const removeTodo = (todoDiv: HTMLElement) => {
     // Remove from todoArray
     const id = +todoDiv.id.replace('todo-','');
 
-    todoArray.map(item => item.id).indexOf(id);
+    todoArray.splice(todoArray.findIndex(item => item.id === id), 1)
 
     // Remove todo element.
     todoDiv.remove()

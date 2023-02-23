@@ -12,7 +12,7 @@ A Todo List web application with basic web storage.
 
 ## Project Status
 
-In Progress
+In Progress - test
 
 ## To do
 - [ ] Add ability to view task description and edit task.
